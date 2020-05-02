@@ -80,6 +80,7 @@
 <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 <script src="js/scripts.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).on('ready', function () {
@@ -134,15 +135,15 @@
             }
     );
     wow.init();
-    document.getElementById('moar').onclick = function () {
-        var section = document.createElement('section');
-        section.className = 'section--purple wow fadeInDown';
-        this.parentNode.insertBefore(section, this);
-    };
+//    document.getElementById('moar').onclick = function (e) {
+//        var section = document.createElement('section');
+//        section.className = 'section--purple wow fadeInDown';
+//        this.parentNode.insertBefore(section, this);
+//    };
 </script>
 <script src="js/anime.min.js"></script>
 <script>
-    var TxtType = function(el, toRotate, period) {
+    var TxtType = function (el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -152,44 +153,46 @@
         this.isDeleting = false;
     };
 
-    TxtType.prototype.tick = function() {
+    TxtType.prototype.tick = function () {
         var i = this.loopNum % this.toRotate.length;
         var fullTxt = this.toRotate[i];
 
         if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
         } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
         var that = this;
         var delta = 200 - Math.random() * 100;
 
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
+        if (this.isDeleting) {
+            delta /= 2;
         }
 
-        setTimeout(function() {
-        that.tick();
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
         }, delta);
     };
 
-    window.onload = function() {
+    window.onload = function () {
         var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
+        for (var i = 0; i < elements.length; i++) {
             var toRotate = elements[i].getAttribute('data-type');
             var period = elements[i].getAttribute('data-period');
             if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
+                new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
         // INJECT CSS
@@ -199,7 +202,7 @@
         document.body.appendChild(css);
     };
 </script>
-    
+
 <script>
     window.onscroll = function () {
         myFunction()

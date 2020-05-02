@@ -3,7 +3,15 @@
     <?php include './headurl.php'; ?>
 
     <body>
-        <div id="myModalpromo" class="modal fade">
+        <div class="load-container">
+            <div class="load-wrap">
+                <div class="loading">
+                    <div class="bounceball"></div>
+                    <div class="load-text">SITE LOADING</div>
+                </div>
+            </div>
+        </div>
+        <div id="" data-id="myModalpromo" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -64,8 +72,133 @@
                 </div>
             </div>
         </div>
+        <!-- Search Modal -->
+        <div class="modal fade search-modal searchbar" tabindex="-1" role="dialog" aria-labelledby="SearchModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                        <!--<h5 class="modal-title" id="exampleModalLongTitle">Search and Get</h5>-->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3 class="mb-4 text-center">Curabitur efficitur arcu eget</h3>
+                        <form class="pb-5 mb-5">
+                            <div class="row mx-0">
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group relative">
+                                        <i class="fa fa-map-marker"></i>
+                                        <input type="text" class="form-control" placeholder="Address">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="input-group">
+                                        <select class="form-control">
+                                            <option value="0">- Select -</option>
+                                            <option value="medical">Medical</option>
+                                            <option value="doctor">Doctor</option>
+                                            <option value="assistant-boy">Assistant Boy</option>
+                                            <option value="nurse">Nurse</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-btn text-center">
+                                <button class="btn hvr-sweep-to-right bg-transparent" type="submit">
+                                    Search <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php include './header.php'; ?>
-        <section class="hero text-center">
+        <!-- Slider Started -->
+        <main class="main-content p-3 p-sm-0">
+            <section class="slideshow">
+                <div class="slideshow-inner">
+                    <div class="slides">
+                        <div class="slide is-active ">
+                            <div class="slide-content">
+                                <div class="caption">
+                                    <div class="title">Slide title 1</div>
+                                    <div class="text">
+                                        <p>Slide description 1</p>
+                                    </div> 
+                                    <a href="#" class="bnr-btn">
+                                        <span class="btn-inner">Learn More</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="image-container"> 
+                                <img src="images/hero1.jpg" alt="" class="image" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="caption">
+                                    <div class="title">Slide title 2</div>
+                                    <div class="text">
+                                        <p>Slide description 2</p>
+                                    </div> 
+                                    <a href="#" class="bnr-btn">
+                                        <span class="btn-inner">Learn More</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/hero2.jpg" alt="" class="image" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="caption">
+                                    <div class="title">Slide title 3</div>
+                                    <div class="text">
+                                        <p>Slide description 3</p>
+                                    </div> 
+                                    <a href="#" class="bnr-btn">
+                                        <span class="btn-inner">Learn More</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img src="images/hero3.jpg" alt="" class="image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <div class="item is-active"> 
+                            <span class="icon">1</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon">2</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon">3</span>
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <div class="arrow prev">
+                            <span class="svg svg-arrow-left">
+                                <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"/> </svg>
+                                <span class="alt sr-only"></span>
+                            </span>
+                        </div>
+                        <div class="arrow next">
+                            <span class="svg svg-arrow-right">
+                                <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve"> <path d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"/> </svg>
+                                <span class="alt sr-only"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+        </main>
+        <!-- Slider Ended -->
+<!--        <section class="hero text-center">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -87,23 +220,23 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </section>
+        </section>-->
 
         <section class="icon-sec wow fadeInDown" data-wow-suration="3s">
             <div class="container">
                 <div class="row clearfix">
                     <div class="col-md-12">
                         <h1>
-                            <a href="" class="typewrite" data-period="2000" data-type='[ "My Medical Mate Better Service Fast Service." ]'>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "My Medical Mate", "Better Service", "Fast Service" ]'>
                             </a>
-                          </h1>
+                        </h1>
                         <h2 class="center text-center mb30">Quick view</h2>
                         <ul class="list-inline text-center services-brief">
-                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/01.png" alt=""><span>Convallis</span></a></li>
-                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/02.png" alt=""><span>Quisque</span></a></li>
-                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/03.png" alt=""><span>Fermentum</span></a></li>
+                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/01.png" alt=""><span>Facilisis</span></a></li>
+                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/02.png" alt=""><span>Facilisis</span></a></li>
+                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/03.png" alt=""><span>Facilisis</span></a></li>
                             <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/06.png" alt=""><span>Facilisis</span></a></li>
-                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/07.png" alt=""><span>Consectetur</span></a></li>
+                            <li class="list-inline-item" style="filter: grayscale(0) blur(0px);"><a href="#!" class="pulse"><img src="images/icons/07.png" alt=""><span>Facilisis</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,11 +250,11 @@
                         <h2 class="mb30">Upload Your Prescription</h2>
                         <h4 class="sub-title">Lorem Ipsum has been the<br>
                             industry's standard</h4>
-                        <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis lacus libero, at semper odio porttitor at. Phasellus ultrices ligula et fermentum mollis. Sed enim urna, tristique in turpis gravida, tempor fermentum nibh. Quisque nec aliquet ante. Ut vel egestas est. Nunc facilisis leo vitae ante consectetur, ut fringilla orci luctus. </p>
+                        <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis lacus libero, at semper odio porttitor at. Ut vel egestas est. Nunc facilisis leo vitae ante consectetur, ut fringilla orci luctus. </p>
                         <a href="about.php" class="hvr-sweep-to-right">Upload Prescription <i class="fa fa-medkit"></i></a>
                     </div>
                     <div class="col-lg-6 wow bounceInRight" data-wow-offset="300">
-                        <img src="images/1.jpg" alt="" class="img-fluid brd-10">
+                        <img src="images/1.jpg" style="max-height: 350px;" alt="" class="img-fluid brd-10">
                     </div>
                 </div>
             </div>
@@ -141,12 +274,11 @@
             <div class="container">
                 <div class="row clearfix">
                     <div class="col-lg-6 wow bounceInLeft" data-wow-offset="300">
-                        <img src="images/2.jpg" alt="" class="img-fluid brd-10">
+                        <img src="images/2.jpg" style="max-height: 300px; display: block;" alt="" class="brd-10 img-fluid mr-lg-0 mx-auto">
                     </div>
                     <div class="col-lg-6 wow bounceInRight" data-wow-offset="300">
                         <h2 class="mb30">Get Appointment</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis lacus libero, at semper odio porttitor at. Phasellus ultrices ligula et fermentum mollis. Sed enim urna, tristique in turpis gravida, tempor fermentum nibh. Quisque nec aliquet ante. Ut vel egestas est. Nunc facilisis leo vitae ante consectetur, ut fringilla orci luctus. </p>
-                        <p class="mb30">Ut vel egestas est. Nunc facilisis leo vitae ante consectetur, ut fringilla orci luctus. </p>
+                        <p class="mb30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis lacus libero, at semper odio orttitor. Ut vel egestas est. Nunc facilisis leo vitae ante consectetur, ut fringilla orci luctus. </p>
                         <a href="about.php" class="hvr-sweep-to-right">Get Appointment <i class="fa fa-calendar"></i></a>
                     </div>
                 </div>
@@ -313,18 +445,18 @@
                             <div class="carousel-inner">
                                 <div class="item carousel-item active">
                                     <div class="img-box"><img src="images/t-1.jpg" alt=""></div>
-                                    <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
                                     <p class="overview"><b>Paula Wilson</b>, Phasellus gravida</p>
+                                    <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
                                 </div>
                                 <div class="item carousel-item">
                                     <div class="img-box"><img src="images/t-1.jpg" alt=""></div>
-                                    <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
                                     <p class="overview"><b>Antonio Moreno</b>, Phasellus gravida</p>
+                                    <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
                                 </div>
                                 <div class="item carousel-item">
                                     <div class="img-box"><img src="images/t-1.jpg" alt=""></div>
-                                    <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
                                     <p class="overview"><b>Michael Holz</b>, Phasellus gravida</p>
+                                    <p class="testimonial">Phasellus vitae suscipit justo.Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
                                 </div>
                             </div>
                             <!-- Carousel controls -->
