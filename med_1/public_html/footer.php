@@ -36,7 +36,7 @@
             <div class="col-lg-3 col-md-6">
                 <h4>Site Link</h4>
                 <ul>
-                    <li><a href="#">Upload Prescription</a></li> 
+                    <li><a href="#">Upload Prescription</a></li>
                     <li><a href="#">Find Doctors</a></li>
                     <li><a href="#">Find Clinic</a></li>
                     <li><a href="#">Find Assistant Boy</a></li>
@@ -45,7 +45,7 @@
             <div class="col-lg-3 col-md-6">
                 <h4>Site Link</h4>
                 <ul>
-                    <li><a href="#">Upload Prescription</a></li> 
+                    <li><a href="#">Upload Prescription</a></li>
                     <li><a href="#">Find Doctors</a></li>
                     <li><a href="#">Find Clinic</a></li>
                     <li><a href="#">Find Assistant Boy</a></li>
@@ -54,7 +54,7 @@
             <div class="col-lg-3 col-md-6">
                 <h4>Site Link</h4>
                 <ul>
-                    <li><a href="#">Upload Prescription</a></li> 
+                    <li><a href="#">Upload Prescription</a></li>
                     <li><a href="#">Find Doctors</a></li>
                     <li><a href="#">Find Clinic</a></li>
                     <li><a href="#">Find Assistant Boy</a></li>
@@ -69,7 +69,7 @@
                         <input type="submit" class="btn-subscribe" value="Send">
                     </div>
                 </form>
-            </div>  
+            </div>
         </div>
     </div>
     <div class="copyright">
@@ -223,5 +223,25 @@
     $(document).ready(function () {
         $("#myModalpromo").modal('show');
     });
+</script>
+<script>
+    var rangeSlider = function () {
+        var slider = $('.range-slider'),
+                range = $('.range-slider__range'),
+                value = $('.range-slider__value');
+
+        slider.each(function () {
+
+            value.each(function () {
+                var value = $(this).prev().attr('value');
+                $(this).html(value);
+            });
+
+            range.on('input', function () {
+                $(this).next(value).html(this.value);
+            });
+        });
+    };
+    rangeSlider();
 </script>
 </body>
