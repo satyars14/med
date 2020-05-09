@@ -244,4 +244,59 @@
     };
     rangeSlider();
 </script>
+<script>
+    $(document).ready(function () {
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function () {
+            $(this).prev(".tog-title").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function () {
+            $(this).prev(".tog-title").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function () {
+            $(this).prev(".tog-title").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+</script>
+<script>
+    function getVals() {
+        // Get slider values
+        var parent = this.parentNode;
+        var slides = parent.getElementsByTagName("input");
+        var slide1 = parseFloat(slides[0].value);
+        var slide2 = parseFloat(slides[1].value);
+        // Neither slider will clip the other, so make sure we determine which is larger
+        if (slide1 > slide2) {
+            var tmp = slide2;
+            slide2 = slide1;
+            slide1 = tmp;
+        }
+
+        var displayElement = parent.getElementsByClassName("rangeValues")[0];
+        displayElement.innerHTML = "Rs " + slide1 + " - Rs " + slide2 + "";
+    }
+
+    window.onload = function () {
+        // Initialize Sliders
+        var sliderSections = document.getElementsByClassName("range-slider-price");
+        for (var x = 0; x < sliderSections.length; x++) {
+            var sliders = sliderSections[x].getElementsByTagName("input");
+            for (var y = 0; y < sliders.length; y++) {
+                if (sliders[y].type === "range") {
+                    sliders[y].oninput = getVals;
+                    // Manually trigger event first time to display values
+                    sliders[y].oninput();
+                }
+            }
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $(".mb-filter-bar").click(function () {
+            $("aside").slideToggle();
+        });
+    });
+</script>
 </body>

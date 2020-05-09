@@ -181,11 +181,13 @@
         <section class="listing">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col-md-3">
+                    <div class="col-lg-4 col-xl-3">
+                        <span class="mb-filter-bar d-sm-block d-lg-none"><i class="fa fa-bars"></i></span>
                         <aside>
-                            <div id="accordion1">
+                            <div class="sidebar-title">FILTER BY <a href="#" class="clear-btn">Clear</a></div>
+                            <div id="accordion1" class="mb-4">
                                 <a class="tog-title" data-toggle="collapse" href="#collapseOne">
-                                    Select Box
+                                    <i class="fa fa-plus"></i>Select Box
                                 </a>
                                 <div id="collapseOne" class="collapse show" data-parent="#accordion1">
                                     <div class="form-group">
@@ -199,9 +201,9 @@
                                 </div>
                             </div>
 
-                            <div id="accordion2">
+                            <div id="accordion2" class="mb-4">
                                 <a class="tog-title" data-toggle="collapse" href="#collapseTwo">
-                                    Check Box
+                                    <i class="fa fa-plus"></i>Check Box
                                 </a>
                                 <div id="collapseTwo" class="collapse show" data-parent="#accordion2">
                                     <div class="custom-control custom-checkbox">
@@ -219,9 +221,9 @@
                                 </div>
                             </div>
 
-                            <div id="accordion3">
+                            <div id="accordion3" class="mb-4">
                                 <a class="tog-title" data-toggle="collapse" href="#collapseThree">
-                                    Radio Input
+                                    <i class="fa fa-plus"></i>Radio Input
                                 </a>
                                 <div id="collapseThree" class="collapse show" data-parent="#accordion3">
                                     <div class="custom-control custom-radio">
@@ -235,9 +237,9 @@
                                 </div>
                             </div>
 
-                            <div id="accordion4">
+                            <div id="accordion4" class="mb-4">
                                 <a class="tog-title" data-toggle="collapse" href="#collapseFour">
-                                    Star Rating
+                                    <i class="fa fa-plus"></i>Star Rating
                                 </a>
                                 <div id="collapseFour" class="collapse show" data-parent="#accordion4">
                                     <div class="range-slider">
@@ -247,29 +249,28 @@
                                 </div>
                             </div>
 
-                            <div id="accordion5">
+                            <div id="accordion5" class="">
                                 <a class="tog-title" data-toggle="collapse" href="#collapseFive">
-                                    Fees / Appointment
+                                    <i class="fa fa-plus"></i>Fees / Appointment
                                 </a>
                                 <div id="collapseFive" class="collapse show" data-parent="#accordion5">
-                                    <div class="range-slider">
-                                        <input class="range-slider__range" type="range" value="200" min="100" max="500" step="100">
-                                        <span class="range-slider__value">0</span>
+                                    <div class="range-slider-price">
+                                        <input value="100" min="100" max="500" step="100" type="range">
+                                        <input value="500" min="100" max="500" step="100" type="range">
+                                        <span class="rangeValues"></span>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
 
                         </aside>
+
+
                     </div>
 
-                    <div class="col-md-9">
+                    <div class="col-lg-8 col-xl-9 mt-40">
                         <div class="row clearfix">
 
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor1.jpg" class="img-fluid" alt="">
@@ -281,7 +282,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor2.jpg" class="img-fluid" alt="">
@@ -293,7 +294,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor3.jpg" class="img-fluid" alt="">
@@ -306,7 +307,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor1.jpg" class="img-fluid" alt="">
@@ -318,7 +319,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor2.jpg" class="img-fluid" alt="">
@@ -330,7 +331,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor3.jpg" class="img-fluid" alt="">
@@ -343,7 +344,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor1.jpg" class="img-fluid" alt="">
@@ -355,7 +356,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor2.jpg" class="img-fluid" alt="">
@@ -367,7 +368,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-6 col-xl-4">
                                 <div class="cbp-item">
                                     <div class="prof-image">
                                         <img src="images/doctor3.jpg" class="img-fluid" alt="">
