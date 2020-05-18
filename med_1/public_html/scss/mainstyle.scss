@@ -1359,3 +1359,164 @@ aside {
         display: none;
     }
 }
+
+/*--------------------Profile--------------------*/
+.profile{
+    .profile-sidebox {
+        background: #f5f5f5;
+        padding: 30px;
+        margin-top: 55px;
+        box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.1);
+    }
+    .profile-img {
+        margin-top: -85px;
+        max-width: 135px;
+        max-height: 135px;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            border: 5px solid #fff;
+        }
+    }
+    .name {
+        font-family: $font-heading;
+        font-size: 22px;
+        font-weight: bold;
+        color: $color-primary;
+        margin-bottom: 5px;
+    }
+    .desg {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .exp {
+        font-size: 14px;
+        font-weight: bold;
+        color: #808080;
+        margin-bottom: 5px;
+    }
+    .rating {
+        margin-top: 10px;
+        .fa-star{
+            color: #ffd203;
+        }
+        .rating-value {
+            background: $color-secondary;
+            color: #fff;
+            font-size: 16px;
+            padding: 4px 20px;
+            border-radius: 100px;
+            display: inline-block;
+        }
+    }
+    .speciality{
+        border-top: 1px solid #ddd;
+        margin-top: 30px;
+        padding-top: 30px;
+        h4{font-size: 16px; text-transform: uppercase; color:$color-secondary;}
+        ul{
+            margin-bottom: 0;
+            li{
+                list-style-type: none;
+                line-height: 1.3;
+                position: relative;
+                padding-left: 15px;
+                &:after{
+                    content: '\f105';
+                    font-family: "FontAwesome";
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                    bottom: 0;
+                    font-size: 14px;
+                }
+                a{
+                    font-size: 14px;
+                    color: #555;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: none;
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+    .clinic-list{
+        li{
+            display: inline-block;
+            margin-bottom: 8px;
+            background: #eee;
+            a{
+                text-decoration: none;
+                color: #002060;
+                border-radius: 4px;
+                padding: 8px 12px;
+                font-size: 15px;
+                &:hover{
+                    text-decoration: none;
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+    .booking-form{
+        border: 1px solid #ddd;
+        h4 {
+            background: #696969;
+            color: #fff;
+            padding: 15px 30px;
+        }
+        form {
+            padding: 30px;
+        }
+        .input-group-prepend {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 9;
+        }
+        .input-group-text {
+            background: none;
+            border: none;
+        }
+        select.form-control {
+            padding-left: 40px;
+            border-radius: 0;
+        }
+        select.form-control:focus{
+            outline: none;
+            border-color: #ced4da;
+        }
+        .form-row>[class*=col-] {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .booking-fees {
+            font-size: 16px;
+            color: $color-primary;
+            line-height: 1.5;
+            padding: 12px 20px;
+        }
+        .hvr-sweep-to-right {
+            padding: 10px 35px;
+        }
+    }
+}
+@media screen and (max-width: 479px){
+    .form-row {
+        display: block;
+        .input-group {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media screen and (min-width: 480px){
+    select.form-control.no-brd-r {
+        border-right: none;
+    }
+}
